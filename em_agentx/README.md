@@ -1,4 +1,11 @@
-# em-agentx -- ADLS Gen2 Lite Emulator
+# em_agentx — ADLS Gen2 Lite Emulator
+
+> **Evaluation context:** This is the result of the **AgentX1** run — AgentX Auto used as a
+> drop-in coding agent (no forced role separation). This run demonstrated that AgentX Auto
+> alone does not clearly outperform a standard coding-agent workflow. See the
+> [main README](../README.md) for results and comparisons.
+
+---
 
 A small, deterministic local emulator for a practical subset of Azure Data
 Lake Storage Gen2. The real `azure-storage-file-datalake` Python SDK can be
