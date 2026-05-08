@@ -1,0 +1,14 @@
+services:
+  adls-lite:
+    build: .
+    ports:
+      - "127.0.0.1:10004:10004"
+    volumes:
+      - adls-data:/var/lib/adls-lite
+    restart: unless-stopped
+    environment:
+      ADLS_LITE_MODE: snapshot
+      ADLS_LITE_DATA_DIR: /var/lib/adls-lite
+
+volumes:
+  adls-data:

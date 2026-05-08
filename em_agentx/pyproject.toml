@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "em-agentx"
+version = "0.1.0"
+description = "Local ADLS Gen2 Lite Emulator: a small subset of Azure Data Lake Storage Gen2 for integration tests."
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi>=0.110",
+    "uvicorn>=0.27",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8",
+    "httpx>=0.27",
+    "azure-storage-file-datalake>=12.18",
+    "requests>=2.32",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

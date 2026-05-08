@@ -1,0 +1,19 @@
+[project]
+name = "adls-lite"
+version = "0.1.0"
+description = "ADLS Gen2 Lite Emulator"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.115.0",
+    "uvicorn[standard]>=0.32.0",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=8.3.0",
+    "httpx>=0.27.0",
+    "azure-storage-file-datalake==12.23.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

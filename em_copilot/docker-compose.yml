@@ -1,0 +1,21 @@
+services:
+  adls-lite:
+    build: .
+    image: adls-gen2-lite:local
+    container_name: adls-gen2-lite
+    ports:
+      - "10004:10004"
+    volumes:
+      - adls_data:/data
+    environment:
+      ADLS_LITE_DATA_DIR: /data
+      ADLS_LITE_PORT: "10004"
+      ADLS_LITE_ACCOUNT: devstoreaccount1
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request,sys; sys.exit(0 if urllib.request.urlopen('http://127.0.0.1:10004/health',timeout=2).read()==b'OK' else 1)"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+volumes:
+  adls_data:

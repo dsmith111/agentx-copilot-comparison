@@ -1,0 +1,18 @@
+services:
+  emulator:
+    build: .
+    image: em-agentx-emulator:latest
+    container_name: em-agentx-emulator
+    ports:
+      - "10004:10004"
+    environment:
+      EM_AGENTX_HOST: "0.0.0.0"
+      EM_AGENTX_PORT: "10004"
+      EM_AGENTX_DATA_DIR: "/data"
+      EM_AGENTX_ACCOUNT: "devstoreaccount1"
+    volumes:
+      - emulator-data:/data
+    restart: unless-stopped
+
+volumes:
+  emulator-data:
