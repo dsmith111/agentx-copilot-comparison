@@ -16,7 +16,7 @@ A presentation summarizing the evaluation is included in the repo as `agentx_cop
 
 ## Background
 
-Our team already uses modern coding agents such as GitHub Copilot, Claude Code, Codex, and related tools. AgentX advertises a different value proposition: not only code generation, but structured multi-agent software delivery inside the IDE.
+Many people already use modern coding agents such as GitHub Copilot, Claude Code, Codex, and related tools. AgentX advertises a different value proposition: not only code generation, but structured multi-agent software delivery inside the IDE.
 
 AgentX includes role-specific agents such as:
 
