@@ -1,4 +1,12 @@
-# ADLS Gen2 Lite Emulator
+# em_agentx2 — ADLS Gen2 Lite Emulator
+
+> **Evaluation context:** This is the result of the **AgentX2** run — AgentX used with a
+> forced, role-driven delivery workflow (PM → Research → Architect → Engineer → Tester →
+> Reviewer → DevOps → Certification → Learning). This run produced the strongest combination
+> of edge-case coverage and delivery traceability. See the
+> [main README](../README.md) for results and comparisons.
+
+---
 
 A lightweight, local emulator for Azure Data Lake Storage Gen2, built for development and testing
 without requiring real Azure resources or an Azure login.

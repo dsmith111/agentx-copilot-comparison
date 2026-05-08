@@ -1,4 +1,11 @@
-# ADLS Gen2 Lite Emulator
+# em_copilot — ADLS Gen2 Lite Emulator
+
+> **Evaluation context:** This is the result of the **Copilot / Claude 4.7 1M** run — a standard
+> coding-agent workflow with no structured role separation. It serves as both the initial setup
+> form (shared with `em_base`) and the final delivered implementation. See the
+> [main README](../README.md) for results and comparisons against the AgentX runs.
+
+---
 
 A small, Dockerized local emulator implementing a practical subset of the
 [Azure Data Lake Storage Gen2](https://learn.microsoft.com/azure/storage/blobs/data-lake-storage-introduction)
