@@ -178,6 +178,24 @@ This was designed to test AgentX’s advertised value as a multi-agent delivery 
 
 ---
 
+## AgentX2 Role Workflow
+
+AgentX2 used a structured, role-driven delivery process rather than a simple code-and-iterate loop.
+
+```mermaid
+flowchart LR
+    PM["📋 Product Manager\nPRD / Work Order"] --> R["🔍 Research Agent\nSDK Compatibility Notes"]
+    R --> A["🏛️ Architect\nADR + Technical Spec"]
+    A --> T1["🧪 Tester\nTest Plan"]
+    T1 --> E["⚙️ Engineer\nImplementation"]
+    E --> Rev["👁️ Reviewer\nAudit"]
+    Rev --> D["🐳 DevOps\nDocker / Evaluator Validation"]
+    D --> T2["✅ Tester\nCertification"]
+    T2 --> Learn["📚 AgentX Auto\nLearning Capture"]
+```
+
+---
+
 ## AgentX2 Required Artifacts
 
 AgentX2 produced the following delivery artifacts:
@@ -213,6 +231,14 @@ All three runs produced working code.
 | Process artifacts    |             Minimal |            Minimal |                                   Strong |
 | Hidden-edge behavior |               Mixed |              Mixed |                                     Best |
 
+```mermaid
+xychart-beta
+    title "Unit / API Test Count by Run"
+    x-axis ["Copilot / Claude", "AgentX1 (Auto)", "AgentX2 (Role-Driven)"]
+    y-axis "Tests" 0 --> 75
+    bar [23, 25, 68]
+```
+
 Pass/fail alone was not enough to distinguish value. All three could build the basic project.
 
 The differences emerged in:
@@ -240,6 +266,16 @@ We also compared behavior on edge cases that were not the primary acceptance gat
 | Artifacts explaining decisions         |               No |      No |     Yes |
 
 AgentX2 had the strongest combination of edge-case behavior and delivery traceability.
+
+> **Edge-case scoring key:** Pass = 1 pt · Basic/Partial = 0.5 pt · Fail = 0 pt · Yes/No artifact = 1/0 pt (7 dimensions total)
+
+```mermaid
+xychart-beta
+    title "Edge-Case Score (out of 7)"
+    x-axis ["Copilot / Claude", "AgentX1 (Auto)", "AgentX2 (Role-Driven)"]
+    y-axis "Score" 0 --> 7
+    bar [5, 3.5, 7]
+```
 
 ---
 
@@ -505,6 +541,26 @@ It supports a narrower claim:
 > AgentX may be valuable as a structured delivery orchestrator when the role-driven workflow is explicitly used.
 
 For teams that already use Copilot / Claude effectively, AgentX should be piloted only where its workflow structure matters enough to justify the extra ceremony.
+
+---
+
+## Tool Positioning
+
+The chart below maps each run on two dimensions: **raw code quality** (correctness, test coverage, edge-case handling) vs. **process rigor** (planning, review, certification, traceability).
+
+```mermaid
+quadrantChart
+    title Code Quality vs Process Rigor
+    x-axis Low Process Rigor --> High Process Rigor
+    y-axis Low Code Quality --> High Code Quality
+    quadrant-1 Ideal — Capable & Structured
+    quadrant-2 Strong Coder, Minimal Process
+    quadrant-3 Needs Improvement
+    quadrant-4 Heavy Process, Less Code Quality
+    Copilot / Claude: [0.15, 0.82]
+    AgentX1 (Auto): [0.20, 0.68]
+    AgentX2 (Role-Driven): [0.88, 0.90]
+```
 
 ---
 
