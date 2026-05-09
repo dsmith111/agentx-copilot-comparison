@@ -186,12 +186,12 @@ AgentX2 used a structured, role-driven delivery process rather than a simple cod
 flowchart LR
     PM["📋 Product Manager\nPRD / Work Order"] --> R["🔍 Research Agent\nSDK Compatibility Notes"]
     R --> A["🏛️ Architect\nADR + Technical Spec"]
-    A --> T1["🧪 Tester\nTest Plan"]
-    T1 --> E["⚙️ Engineer\nImplementation"]
+    A --> TesterPlan["🧪 Tester\nTest Plan"]
+    TesterPlan --> E["⚙️ Engineer\nImplementation"]
     E --> Rev["👁️ Reviewer\nAudit"]
     Rev --> D["🐳 DevOps\nDocker / Evaluator Validation"]
-    D --> T2["✅ Tester\nCertification"]
-    T2 --> Learn["📚 AgentX Auto\nLearning Capture"]
+    D --> TesterCert["✅ Tester\nCertification"]
+    TesterCert --> Learn["📚 AgentX Auto\nLearning Capture"]
 ```
 
 ---
@@ -261,8 +261,8 @@ We also compared behavior on edge cases that were not the primary acceptance gat
 
 AgentX2 had the strongest combination of edge-case behavior and delivery traceability.
 
-> **Edge-case scoring key:** Pass = 1 pt · Basic/Partial = 0.5 pt · Fail = 0 pt · Yes/No artifact = 1/0 pt  
-> Maximum possible score = 7 pts (6 technical cases + 1 artifact dimension)
+> **Edge-case scoring key:** Pass = 1 pt · Basic/Partial = 0.5 pt · Fail = 0 pt · Artifact present = 1 pt · Artifact absent = 0 pt  
+> Maximum possible score = 7 pts (6 technical edge-case dimensions + 1 delivery-artifact dimension)
 
 ![Edge-Case Coverage Heatmap](assets/charts/edge_case_heatmap.png)
 
