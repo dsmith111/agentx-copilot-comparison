@@ -233,7 +233,7 @@ All three runs produced working code.
 
 ```mermaid
 xychart-beta
-    title "Unit / API Test Count by Run"
+    title "Unit / API Test Count by Tool"
     x-axis ["Copilot / Claude", "AgentX1 (Auto)", "AgentX2 (Role-Driven)"]
     y-axis "Tests" 0 --> 75
     bar [23, 25, 68]
@@ -267,11 +267,12 @@ We also compared behavior on edge cases that were not the primary acceptance gat
 
 AgentX2 had the strongest combination of edge-case behavior and delivery traceability.
 
-> **Edge-case scoring key:** Pass = 1 pt · Basic/Partial = 0.5 pt · Fail = 0 pt · Yes/No artifact = 1/0 pt (7 dimensions total)
+> **Edge-case scoring key:** Pass = 1 pt · Basic/Partial = 0.5 pt · Fail = 0 pt · Yes/No artifact = 1/0 pt  
+> Maximum possible score = 7 pts (6 technical cases + 1 artifact dimension)
 
 ```mermaid
 xychart-beta
-    title "Edge-Case Score (out of 7)"
+    title "Edge-Case Score (max 7 pts)"
     x-axis ["Copilot / Claude", "AgentX1 (Auto)", "AgentX2 (Role-Driven)"]
     y-axis "Score" 0 --> 7
     bar [5, 3.5, 7]
@@ -561,6 +562,8 @@ quadrantChart
     AgentX1 (Auto): [0.20, 0.68]
     AgentX2 (Role-Driven): [0.88, 0.90]
 ```
+
+> Axis values are normalized estimates (0–1) derived from the edge-case scores (code quality) and artifact / process output counts (process rigor) measured in this evaluation.
 
 ---
 
