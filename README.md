@@ -183,7 +183,7 @@ This was designed to test AgentX’s advertised value as a multi-agent delivery 
 AgentX2 used a structured, role-driven delivery process rather than a simple code-and-iterate loop.
 
 ```mermaid
-flowchart LR
+flowchart TD
     PM["📋 Product Manager\nPRD / Work Order"] --> R["🔍 Research Agent\nSDK Compatibility Notes"]
     R --> A["🏛️ Architect\nADR + Technical Spec"]
     A --> TesterPlan["🧪 Tester\nTest Plan"]
