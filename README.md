@@ -184,14 +184,14 @@ AgentX2 used a structured, role-driven delivery process rather than a simple cod
 
 ```mermaid
 flowchart LR
-    PM["📋 Product Manager\nPRD / Work Order"] --> R["🔍 Research Agent\nSDK Compatibility Notes"]
-    R --> A["🏛️ Architect\nADR + Technical Spec"]
-    A --> TesterPlan["🧪 Tester\nTest Plan"]
-    TesterPlan --> E["⚙️ Engineer\nImplementation"]
-    E --> Rev["👁️ Reviewer\nAudit"]
-    Rev --> D["🐳 DevOps\nDocker / Evaluator Validation"]
-    D --> TesterCert["✅ Tester\nCertification"]
-    TesterCert --> Learn["📚 AgentX Auto\nLearning Capture"]
+    PM["Product Manager<br/>PRD / Work Order"] --> R["Research Agent<br/>SDK Compatibility Notes"]
+    R --> A["Architect<br/>ADR + Technical Spec"]
+    A --> TesterPlan["Tester<br/>Test Plan"]
+    TesterPlan --> E["Engineer<br/>Implementation"]
+    E --> Rev["Reviewer<br/>Audit"]
+    Rev --> D["DevOps<br/>Docker / Evaluator Validation"]
+    D --> TesterCert["Tester<br/>Certification"]
+    TesterCert --> Learn["AgentX Auto<br/>Learning Capture"]
 ```
 
 ---
