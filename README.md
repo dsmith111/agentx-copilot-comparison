@@ -231,13 +231,7 @@ All three runs produced working code.
 | Process artifacts    |             Minimal |            Minimal |                                   Strong |
 | Hidden-edge behavior |               Mixed |              Mixed |                                     Best |
 
-```mermaid
-xychart-beta
-    title "Unit / API Test Count by Tool"
-    x-axis ["Copilot / Claude", "AgentX1 (Auto)", "AgentX2 (Role-Driven)"]
-    y-axis "Tests" 0 --> 75
-    bar [23, 25, 68]
-```
+![Test Count by Implementation and Suite](assets/charts/test_counts.png)
 
 Pass/fail alone was not enough to distinguish value. All three could build the basic project.
 
@@ -270,13 +264,7 @@ AgentX2 had the strongest combination of edge-case behavior and delivery traceab
 > **Edge-case scoring key:** Pass = 1 pt · Basic/Partial = 0.5 pt · Fail = 0 pt · Yes/No artifact = 1/0 pt  
 > Maximum possible score = 7 pts (6 technical cases + 1 artifact dimension)
 
-```mermaid
-xychart-beta
-    title "Edge-Case Score (max 7 pts)"
-    x-axis ["Copilot / Claude", "AgentX1 (Auto)", "AgentX2 (Role-Driven)"]
-    y-axis "Score" 0 --> 7
-    bar [5, 3.5, 7]
-```
+![Edge-Case Coverage Heatmap](assets/charts/edge_case_heatmap.png)
 
 ---
 
@@ -395,6 +383,10 @@ not faster implementation on simple coding tasks.
 ### 5. AgentX requires operator discipline
 
 The role-driven result was better, but it required forcing the workflow. That is more ceremony than a standard coding-agent loop.
+
+![Codebase Size: Source vs. Test Lines](assets/charts/codebase_size.png)
+
+![Delivery Artifacts Produced](assets/charts/delivery_artifacts.png)
 
 ---
 
@@ -547,7 +539,13 @@ For teams that already use Copilot / Claude effectively, AgentX should be pilote
 
 ## Tool Positioning
 
-The chart below maps each run on two dimensions: **raw code quality** (correctness, test coverage, edge-case handling) vs. **process rigor** (planning, review, certification, traceability).
+The charts below map each run across five evaluation dimensions and on a code-quality vs. process-rigor plane.
+
+![Overall Comparison](assets/charts/overall_comparison.png)
+
+![Estimated Rubric Scores](assets/charts/rubric_scores.png)
+
+The scatter chart below maps each run on two axes: **raw code quality** (correctness, test coverage, edge-case handling) vs. **process rigor** (planning, review, certification, traceability).
 
 ```mermaid
 quadrantChart
